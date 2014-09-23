@@ -13,16 +13,19 @@ curing
 
 ####使用
 
-+	maven依赖
-<!-- 公用spring配置 -->
++	引用
+
+maven依赖
+
 	<dependency>
 		<groupId>com.edwin</groupId>
 		<artifactId>curing</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</dependency>
 
-+	公用spring配置，已配置
-<!-- 公用spring配置 -->
++	公用spring配置
+
+无需在业务中配置
 
 	<!-- mysql方言，用于分页 -->
 	<bean id="mysqlDialect" class="com.edwin.curing.dialect.impl.MySqlDialect" />
@@ -48,7 +51,8 @@ curing
 	</bean>
 
 + 	业务spring配置
-<!-- 业务spring配置-->
+
+业务引用该jar包时的配置
 
 	<!-- 数据源 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" />
@@ -78,7 +82,9 @@ curing
 	</bean>
 	
 + 	业务Dao Example
-<!-- 业务Dao Example -->
+
+example
+
 	/**
      * 获取某一城市下的用户id
      * 
