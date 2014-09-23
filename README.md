@@ -14,13 +14,12 @@ curing
 ####使用
 
 +	maven依赖
-<pre>
-&lt;dependency>
-	&lt;groupId>com.edwin&lt;/groupId>
-	&lt;artifactId>curing&lt;/artifactId>
-	&lt;version>0.0.1-SNAPSHOT&lt;/version>
-&lt;/dependency>
-</pre>
+<!-- 公用spring配置 -->
+	<dependency>
+		<groupId>com.edwin</groupId>
+		<artifactId>curing</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
 
 +	公用spring配置，已配置
 <!-- 公用spring配置 -->
@@ -79,7 +78,7 @@ curing
 	</bean>
 	
 + 	业务Dao Example
-<pre>
+<!-- 业务Dao Example -->
 	/**
      * 获取某一城市下的用户id
      * 
@@ -89,7 +88,8 @@ curing
     @DAOAction(action = DAOActionType.QUERY)
     List<Integer> findUserIdsByCityId(@DAOParam("cityId")
     int cityId, @DAOParam("userIds")
-    List<Integer> userIds);
+    List<Integer> userIds);    
+
 </pre>
 
 
