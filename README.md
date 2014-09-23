@@ -13,8 +13,10 @@ curing
 
 ####使用
 
-+	maven依赖
-<!-- 公用spring配置 -->
++	引用
+
+maven依赖
+
 	<dependency>
 		<groupId>com.edwin</groupId>
 		<artifactId>curing</artifactId>
@@ -23,7 +25,6 @@ curing
 
 +	公用spring配置，已配置
 <!-- 公用spring配置 -->
-
 	<!-- mysql方言，用于分页 -->
 	<bean id="mysqlDialect" class="com.edwin.curing.dialect.impl.MySqlDialect" />
 
@@ -88,10 +89,7 @@ curing
     @DAOAction(action = DAOActionType.QUERY)
     List<Integer> findUserIdsByCityId(@DAOParam("cityId")
     int cityId, @DAOParam("userIds")
-    List<Integer> userIds);    
-
-</pre>
-
+    List<Integer> userIds);
 
 ####实现原理
 基于spring的IntroductionInterceptor接口实现自定义接口的代理增强，关键实现类是IbatisGenericDaoImpl
